@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.js"></script>
+		<script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.js"></script>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				height: 900px;
+				box-sizing: border-box;
+			}
+			div {
+				text-align: center;
+				line-height: 40px;
+				color: #fff;
+			}
+			#div0 {
+				width: 500px;
+				height: 800px;
+				margin-left: 50px;
+				margin-top: 50px;
+				background-color: #eee;
+				border: 1px solid;
+			}
+			#div0-1 {
+				position: relative;
+				width: 500px;
+				height: 700px;
+				margin-left: 50px;
+				margin-top: 50px;
+				background-color: #ddd;
+			}
+			#div1, #div2 {
+				position: absolute;
+				left: 200px;
+				top: 200px;
+				width: 100px;
+				height: 40px;
+				background-color: #2b67f5;
+			}
+			#div2 {
+				top: 500px;
+				background-color: #108757;
+			}
+			
+			.zoomEle-point {	/*小圆点的样式*/
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				z-index: 9;
+				display: none;
+				width: 8px;
+				height: 8px;
+				border-radius: 99px;
+				background-color: #fc6074;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div0">
+			<div id="div0-1">
+				<div id="div1">div1</div>
+				<div id="div2">div2</div>
+			</div>
+		</div>
+		<script src="zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		let zoom = new Zoom({
+			ele : document.getElementById("div1"),
+			edgeEle : document.body
+		});
+		
+		new Zoom({
+			ele : document.getElementById("div2")
+		});
+		
+		</script>
+	</body>
+</html>
