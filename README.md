@@ -9,4 +9,10 @@ new Zoom({
 ```
 在页面中通过【双击鼠标左键添加/移除】缩放功能，可在代码中更改。
 
+注：
+
+1.文件【zoom.js】是基于ES6编写的源文件；
+
+2.文件【zoom(ES5).min.js】是转换为ES5后且压缩过的文件，IE兼容到9+(暂时edge，9+有点小BUG)。
+
 DEMO：https://gonghongchen.github.io/ZoomJS/
