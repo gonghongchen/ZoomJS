@@ -1,6 +1,26 @@
 # ZoomJS——缩放元素
 
 使用方式：
+
+css：
+
+```css
+.zoomEle-point {	/*小圆点的样式*/
+	position: absolute;
+	left: -4px;
+	top: -4px;
+	z-index: 9;
+	display: none;
+	width: 8px;
+	height: 8px;
+	border-radius: 99px;
+	background-color: #fc6074;
+	overflow: hidden;
+}
+```
+
+JavaScript：
+
 ```javaScript
 new Zoom({
     ele : , //被缩放的元素，必选。
